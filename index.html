@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!--Import Custom Styles-->
   <link rel="stylesheet" href="./assets/style.css">
+
   <title>Shawn's JS Calculator</title>
 </head>
 <body>
@@ -25,69 +26,71 @@
     <div class="section">
       <div class="row">
       <!--Number pad on left 70% of screen, 100% width on desktop-->
-      <div class="col s9">
+      <div class="col s9" id="calcBox">
         <div class="row">
           <div class="col s6" id="keyClear">
             <div class="col-content key valign-wrapper">C</div>
           </div>
-          <div class="col s6 valign-wrapper" id="keyBackspace">
-            <div class="col-content key"><-</div>
+          <div class="col s6" id="keyBackspace">
+            <div class="col-content key valign-wrapper"><-</div>
           </div>
         </div>
         <div class="row">
-          <div class="col s3 valign-wrapper" id="key7">
-            <div class="col-content key">7</div>
+          <div class="col s3" id="key7" value="7">
+            <div class="col-content key valign-wrapper">
+              <button class="btn" id="btn7" value="7">7</button>
+            </div>
           </div>
-          <div class="col s3 valign-wrapper" id="key8">
-            <div class="col-content key">8</div>
+          <div class="col s3" id="key8" value="8">
+            <div class="col-content key valign-wrapper">8</div>
           </div>
-          <div class="col s3 valign-wrapper" id="key9">
-            <div class="col-content key">9</div>
+          <div class="col s3" id="key9" value="9">
+            <div class="col-content key valign-wrapper">9</div>
           </div>
-          <div class="col s3 valign-wrapper" id="keyPlus">
-            <div class="col-content key">+</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s3 valign-wrapper" id="key4">
-            <div class="col-content key">4</div>
-          </div>
-          <div class="col s3 valign-wrapper" id="key5">
-            <div class="col-content key">5</div>
-          </div>
-          <div class="col s3 valign-wrapper" id="key6">
-            <div class="col-content key">6</div>
-          </div>
-          <div class="col s3 valign-wrapper" id="keyMinus">
-            <div class="col-content key">-</div>
+          <div class="col s3" id="keyPlus">
+            <div class="col-content key valign-wrapper">+</div>
           </div>
         </div>
         <div class="row">
-          <div class="col s3 valign-wrapper" id="key1">
-            <div class="col-content key">1</div>
+          <div class="col s3" id="key4" value="4">
+            <div class="col-content key valign-wrapper">4</div>
           </div>
-          <div class="col s3 valign-wrapper" id="key2">
-            <div class="col-content key">2</div>
+          <div class="col s3" id="key5" value="5">
+            <div class="col-content key valign-wrapper">5</div>
           </div>
-          <div class="col s3 valign-wrapper" id="key3">
-            <div class="col-content key">3</div>
+          <div class="col s3" id="key6" value="6">
+            <div class="col-content key valign-wrapper">6</div>
           </div>
-          <div class="col s3 valign-wrapper" id="keyMult">
-            <div class="col-content key">*</div>
+          <div class="col s3" id="keyMinus">
+            <div class="col-content key valign-wrapper">-</div>
           </div>
         </div>
         <div class="row">
-          <div class="col s3 valign-wrapper" id="key0">
-            <div class="col-content key">0</div>
+          <div class="col s3" id="key1" value="1">
+            <div class="col-content key valign-wrapper">1</div>
           </div>
-          <div class="col s3 valign-wrapper" id="keyDot">
-            <div class="col-content key">.</div>
+          <div class="col s3" id="key2" value="2">
+            <div class="col-content key valign-wrapper">2</div>
           </div>
-          <div class="col s3 valign-wrapper" id="keyDivide">
-            <div class="col-content key">/</div>
+          <div class="col s3" id="key3" value="3">
+            <div class="col-content key valign-wrapper">3</div>
           </div>
-          <div class="col s3 valign-wrapper" id="keyEqual">
-            <div class="col-content key">=</div>
+          <div class="col s3" id="keyMult">
+            <div class="col-content key valign-wrapper">*</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s3" id="key0" value="0">
+            <div class="col-content key valign-wrapper">0</div>
+          </div>
+          <div class="col s3" id="keyDot">
+            <div class="col-content key valign-wrapper">.</div>
+          </div>
+          <div class="col s3" id="keyDivide">
+            <div class="col-content key valign-wrapper">/</div>
+          </div>
+          <div class="col s3" id="keyEqual">
+            <div class="col-content key valign-wrapper">=</div>
           </div>
         </div>
       </div>
@@ -102,5 +105,7 @@
     
   </div>
 
+    <!--Import JS-->
+    <script src="./assets/index.js"></script>
 </body>
 </html>
