@@ -1,0 +1,26 @@
+:root {
+  background: #292929;
+  color: #b0b0b0;
+}
+
+#displayBox {
+  border-style: solid;
+  border-width: 2px;
+  padding-right: 5px;
+
+}
+
+#historyBox {
+  border-style: solid;
+  border-width: 0px 0px 0px 1px;
+  height: 60vh;
+}
+
+.key {
+  height: 10vh;
+  width: 98%;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
