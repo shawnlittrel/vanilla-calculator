@@ -22,6 +22,6 @@ calcBox.addEventListener("click", event => {
   if(!closestBtn) return;
   if(!calcBox.contains(closestBtn)) return;
 
-  console.log(closestBtn.value);
-  
+  //push each press to displayArray
+  displayArray.push(closestBtn.value); 
 });
