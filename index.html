@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,134 +13,147 @@
 
   <title>Shawn's JS Calculator</title>
 </head>
+
 <body>
   <div class="center">
-     <h1>Shawn's JS Calculator</h1>
-  <h2>Made with JavaScript and CSS</h2> 
+    <h1>Shawn's JS Calculator</h1>
+    <h2>Made with JavaScript and CSS</h2>
   </div>
   <div class="divider"></div>
   <div class="container">
+    <!--Total-->
+    <div class="section right-align">
+      <div class="row">
+        <div class="col s3">
+          <p>Total:</p>
+        </div>
+        <div class="col s9">
+          <p id="total"></p>
+        </div>
+      </div>
+    </div>
     <!--Display Box-->
     <div class="section right-align">
-      <p id="displayBox">Display Box</p>
+      <p id="displayBox"></p>
     </div>
     <div class="section">
       <div class="row">
-      <!--Number pad on left 70% of screen, 100% width on desktop-->
-      <div class="col s9" id="calcBox">
-        <div class="row">
-          <div class="col s6">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnClr" value="clear">C</button>
+        <!--Number pad on left 70% of screen, 100% width on desktop-->
+        <div class="col s9" id="calcBox">
+          <div class="row">
+            <div class="col s6">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnClr" value="clear">C</button>
               </div>
+            </div>
+            <div class="col s6">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnBkspc" value="bkspc"><- </button>
+              </div>
+            </div>
           </div>
-          <div class="col s6">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnBkspc" value="bkpsc"><-</button>
+          <div class="row">
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn7" value="7">7</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn8" value="8">8</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn9" value="9">9</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnPlus" value="+">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn4" value="4">4</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn5" value="5">5</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn6" value="6">6</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnMinus" value="-">-</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn1" value="1">1</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn2" value="2">2</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn3" value="3">3</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnMult" value="*">*</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btn0" value="0">0</button>
+              </div>
+            </div>
+            <div class="col s3" id="keyDot">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnDot" value=".">.</btn>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnDivide" value="/">/</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="col-content key valign-wrapper">
+                <button class="btn" id="btnEqual" value="=">=</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn7" value="7">7</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn8" value="8">8</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn9" value="9">9</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnPlus" value="+">+</button>
-            </div>
-          </div>
+        <!--History on right 30%  of screen, invisible on mobile-->
+        <div class="col s3" id="historyBox">
+          History
         </div>
-        <div class="row">
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn4" value="4">4</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn5" value="5">5</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn6" value="6">6</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnMinus" value="-">-</button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn1" value="1">1</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn2" value="2">2</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn3" value="3">3</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnMult" value="*">*</button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btn0" value="0">0</button>
-            </div>
-          </div>
-          <div class="col s3" id="keyDot">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnDot" value="dot">.</btn>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnDivide" value="/">/</button>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="col-content key valign-wrapper">
-              <button class="btn" id="btnEqual" value="=">=</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--History on right 30%  of screen, invisible on mobile-->
-      <div class="col s3" id="historyBox">
-        History
-      </div>
       </div>
 
     </div>
-    
-    
+
+
   </div>
 
-    <!--Import JS-->
-    <script src="./assets/index.js"></script>
+  <!--Import JS-->
+  <script src="./assets/index.js"></script>
 </body>
+
 </html>
